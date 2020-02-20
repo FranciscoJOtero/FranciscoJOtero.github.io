@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Distribucion1 OterHerFran </title>
+        <link rel="stylesheet" href="./css/StyleDistribucion1OterHerFran.css">
+
+    <script>
+        function cuantosClicks() { 
+
+            if(typeof(Storage) !== "undefined") { 
+
+                if (localStorage.cuentadeclicks) {
+
+                    //Si existe el contador, lo incrementamos en 1 
+
+                    localStorage.cuentadeclicks = Number(localStorage.cuentadeclicks)*2; 
+
+                    //Realizamos conversión a número para evitar problemas. Los datos siempre se almacenan como cadena y requieren conversión. 
+                } else { 
+
+                    // Si no existe el contador, lo creamos 
+                    localStorage.cuentadeclicks = 1; 
+                } 
+
+                document.getElementById("parrafo").innerHTML = "Has hecho clic en el botón: " + localStorage.cuentadeclicks + " veces en esta sesión."; 
+
+            } else { 
+
+                document.getElementById("parrafo").innerHTML = "El navegador no soporta almacenamiento local"; 
+            }
+        }
+    </script>
+
+    </head>
+    <body>
+        <div class="ContenedorGridOterHerFran">
+            <header class="ContenedorGridOterHerFran__cabecera">
+                <button onclick="cuantosClicks()"> Pulsar aqui </button>
+                <p id="parrafo"> Has pulsado el boton </p>
+            </header>
+
+            <main class="ContenedorGridOterHerFran__cuerpo">
+               <div> 1 </div>
+               <div> 2 </div>
+               <div> 3 </div>
+               <div> 4 </div>
+               <div> 5 </div>
+               <div> 6 </div>
+               <div> 7 </div>
+               <div> 8 </div>
+               <div> 9 </div>
+               <div> 10 </div>
+               <div> 11 </div>
+               <div> 12 </div>
+               <div> 13 </div>
+               <div> 14 </div>
+               <div> 15 </div>
+               <div> 16 </div>
+               <div> 17 </div>
+               <div> 18 </div>
+               <div> 19 </div>
+               <div> 20 </div>
+            </main>
+
+            <aside class="ContenedorGridOterHerFran__barra">
+                barra lateral
+            </aside>
+
+            <footer class="ContenedorGridOterHerFran__pie">
+                <a href="principalOterHerFran.html"> Página de Inicio </a>
+            </footer>
+        </div>
+    </body>
+</html>
